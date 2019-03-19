@@ -1,3 +1,3 @@
-import pathParse from '../module_a';
+import pathParse from 'module_a';
 
 pathParse();

@@ -1,16 +1,30 @@
-const presets = [
-    [
-        "@babel/env",
-        {
-            targets: {
-                edge: "17",
-                firefox: "60",
-                chrome: "67",
-                safari: "11.1",
-            },
-            useBuiltIns: "usage",
-        },
-    ],
-];
+module.exports = function (api) {
+    api.cache(true);
 
-module.exports = { presets };
+    const presets = [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": ["last 2 versions", "safari >= 7"]
+                }
+            },
+            
+        ],
+        
+    ];
+
+    const babelrcRoots=[
+        ".",
+        "packages/*",
+    ]
+    const plugins = [
+        "@babel/plugin-syntax-dynamic-import"
+    ];
+
+    return {
+        presets,
+        // babelrcRoots,
+        plugins
+    };
+}

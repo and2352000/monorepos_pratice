@@ -1,14 +1,16 @@
 {
-  "name": "module_a",
+  "name": "module_c",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "dependencies": {
+    "module_b": ">=1.0.0"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.3.4"
-  },
-  "dependencies": {
-    "space": "^0.22.2"
   }
 }
